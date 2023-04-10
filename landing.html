@@ -20,7 +20,7 @@
 				<!-- Header -->
 				<!-- Note: The "styleN" class below should match that of the banner element. -->
 					<header id="header" class="alt style2">
-						<a href="index.html" class="logo"><strong>Forty</strong> <span>by HTML5 UP</span></a>
+						<a href="index.html" class="logo"><strong>THY</strong> <span>LAI</span></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -30,8 +30,8 @@
 					<nav id="menu">
 						<ul class="links">
 							<li><a href="index.html">Home</a></li>
-							<li><a href="landing.html">Landing</a></li>
-							<li><a href="generic.html">Generic</a></li>
+							<li><a href="landing.html">About me</a></li>
+							<li><a href="generic.html">Projects</a></li>
 							<li><a href="elements.html">Elements</a></li>
 						</ul>
 						<ul class="actions stacked">
@@ -48,11 +48,14 @@
 								<img src="images/pic07.jpg" alt="" />
 							</span>
 							<header class="major">
-								<h1>Landing</h1>
+								<h1>BC Medical Charges Prediction Model</h1>
 							</header>
 							<div class="content">
-								<p>Lorem ipsum dolor sit amet nullam consequat<br />
-								sed veroeros. tempus adipiscing nulla.</p>
+								<p>Medical charges can be influenced by a range of factors, including socio-economic variables such as age, gender, bmi, the number of children, the frequency of exercise. Accurately predicting medical charges based on these variables can be a useful tool for healthcare providers, insurers, and policymakers in understanding the underlying drivers of healthcare costs and improving access to affordable care.<br> 
+
+									<br>The purpose of this report is to create an effective model that utilizes the `BCMedical` dataset to forecast medical charges with the help of significant socio-economic factors. The study focuses on four variable selection techniques and proposes an appropriate model for the data<br>
+									
+				
 							</div>
 						</div>
 					</section>
@@ -64,78 +67,43 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h2>Sed amet aliquam</h2>
+										<h2>1. Dataset overall</h2>
 									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.</p>
+									<p>The dataset has 1338 observations and 8 variables, the response variable is labeled as `charges` and represent the amount of money that people paid for medical. The following variables for this dataset include:<br>
+										<br>- `age`: This variable represents the age by years. <br>
+										<br>- `gender`:this is a categorical variable with two levels: male and female.<br>
+										<br>- `bmi`: This variable represents the body mass index (BMI) of the individual. It is a continuous variable that is calculated by dividing the weight (in kilograms) by the square of the height (in meters).<br>
+										<br>- `kids`: The number of children<br>
+										<br>- `smoker`: This variable represents whether the individual is a smoker or not. It is a categorical variable with two levels: yes and no.<br>
+										<br>- `exercise`: Number of days per week of exercise activity<br>
+										<br>- `region`: This variable represents the region of the BC where the individual resides. It is a categorical variable with four levels: Vancouver, Mainland Interior, Cariboo, Northern BC.<br></p>
 								</div>
 							</section>
+
+						</div>
+					
 
 						<!-- Two -->
-							<section id="two" class="spotlights">
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic08.jpg" alt="" data-position="center center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Orci maecenas</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic09.jpg" alt="" data-position="top center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Rhoncus magna</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic10.jpg" alt="" data-position="25% 25%" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Sed nunc ligula</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-							</section>
-
-						<!-- Three -->
-							<section id="three">
+							<section id="two">
 								<div class="inner">
 									<header class="major">
-										<h2>Massa libero</h2>
+										<h3>1.1. Descriptive Statistic</h3>
 									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button next">Get Started</a></li>
-									</ul>
-								</div>
+									<p>From the table below, we can get some points that:<br>
+
+										<br>- The minimum age in the dataset is 18 years, and the maximum is 64 years. The average age is 39.21 years.<br> 
+										<br>- The minimum BMI is 16.00, and the maximum is 53.10, with an average of 30.67. <br>
+										<br>- On average, individuals have 1.095 children, with a minimum of 0 and a maximum of 5. <br>
+										<br>- The average frequency of exercise activity per week is 2.01, with a minimum of 0 and a maximum of 7. <br>
+										<br>- The medical charges range from 1122 to 63770, with an average of 13270.<br>
+										
+										<br>More importantly, our attention will be directed towards the response variable, namely 'charges', with the aim of identifying any potential issues or anomalies associated with this variable.<br></p>
+										<span class="image">
+											<img src="images/table 1.png" alt="" />
+									</div>
 							</section>
 
-					</div>
+						</div>
 
 				<!-- Contact -->
 					<section id="contact">
@@ -167,23 +135,22 @@
 									<div class="contact-method">
 										<span class="icon solid alt fa-envelope"></span>
 										<h3>Email</h3>
-										<a href="#">information@untitled.tld</a>
+										<a href="#">lcbthy@gmail.com</a>
 									</div>
 								</section>
 								<section>
 									<div class="contact-method">
 										<span class="icon solid alt fa-phone"></span>
 										<h3>Phone</h3>
-										<span>(000) 000-0000 x12387</span>
+										<span>(778) 912 6789 </span>
 									</div>
 								</section>
 								<section>
 									<div class="contact-method">
 										<span class="icon solid alt fa-home"></span>
 										<h3>Address</h3>
-										<span>1234 Somewhere Road #5432<br />
-										Nashville, TN 00000<br />
-										United States of America</span>
+										<span>Kelowna<br />
+										BC, Canada </span>
 									</div>
 								</section>
 							</section>
